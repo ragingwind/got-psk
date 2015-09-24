@@ -1,0 +1,47 @@
+{
+  "name": "psk-got",
+  "version": "0.0.0",
+  "description": "Get [Polymer Starter Kit](https://goo.gl/xWC7vj) with variety options",
+  "license": "MIT",
+  "repository": "ragingwind/psk-got",
+  "author": {
+    "name": "ragingwind",
+    "email": "ragingwind@gmail.com",
+    "url": "ragingwind.me"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && mocha -t 10000"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "decompress": "^2.3.0",
+    "decompress-unzip": "^3.3.0",
+    "download": "^4.2.0",
+    "gh-got": "^2.0.0",
+    "got": "^4.2.0",
+    "meow": "^3.3.0",
+    "semver-sort": "0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "xo": "^0.7.1"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "mocha"
+    ]
+  }
+}
