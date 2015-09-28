@@ -14,21 +14,25 @@ $ npm install --save got-psk
 ```js
 var gotPSK = require('got-psk');
 
-gotPSK(path.join(__dirname, '/psk'), options).then(function (res) {
+gotPSK('psk-project', 'full').then(function (res) {
 });
 ```
 
 ## API
 
-### gotPSK([options])
+### gotPSK(dest, version)
 
-#### options
-
-##### version
+#### dest
 
 Type: `string`
 
-`light` or `full`, version types of PSK to download and install, are acceptable version set of version type. it also can be used with version number with `@`, if the number is not set, will download with `latest` version. see a sample to understand.
+path to download a zip file
+
+#### version
+
+Type: `string`
+
+`light` or `full`, version types of PSK to download and install, are acceptable version set of version type. it also can be used with version number with `@`, if the number is not given, will download `latest` version. see a sample for understanding.
 
 - 'full': download from full version released latest
 - 'full@1.1.0': download from full version released with 1.1.0 tag
@@ -43,25 +47,18 @@ $ npm install --global got-psk
 ```
 $ got-psk <dest> <version> --help
 
-  Usage
-    got-psk <dest>
+	Usage
+  	$ got-psk <dest> <version>
 
-  Options
-		--no-git keep `.git` directory after downloading
-		--chromeapp customize a PSK project to suit Chrome Dev Editor
-
-	<dest> Path for download PSK
-	<version> Version of PSK released for download, master, light[@version], full[@version] [Default: `full`]
-
-  Examples
+	Examples
 		$ got-psk .
-		# will download PSK full version to current process path
+		# will download the latest version of PSK full version to current path
 
-		$ got-psk --no-git
-		# will download PSK latest github's master version and then remove .git
+		$ got-psk . light
+		# will download the latest version of PSK light version to current path
 
-    $ got-psk . --light --chromeapp
-		# will download PSK light version and then customize the PSK project to fit to Chrome App after unzip
+		$ got-psk . full@1.0.3
+		# will download the 1.0.3 version of PSK light version to current path
 ```
 
 ## License

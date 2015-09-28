@@ -1,9 +1,9 @@
 {
-  "name": "psk-got",
+  "name": "got-psk",
   "version": "0.0.0",
-  "description": "Get [Polymer Starter Kit](https://goo.gl/xWC7vj) with variety options",
+  "description": "Got [Polymer Starter Kit](https://goo.gl/xWC7vj) with variety options",
   "license": "MIT",
-  "repository": "ragingwind/psk-got",
+  "repository": "ragingwind/node-got-psk",
   "author": {
     "name": "ragingwind",
     "email": "ragingwind@gmail.com",
@@ -14,34 +14,31 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && mocha -t 10000"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
     "cli.js"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
-    ""
+    "got",
+    "got-psk",
+    "Polymer Starter Kit",
+    "Chrome App"
   ],
   "dependencies": {
-    "decompress": "^2.3.0",
-    "decompress-unzip": "^3.3.0",
-    "download": "^4.2.0",
-    "gh-got": "^2.0.0",
     "got": "^4.2.0",
+    "got-github-releases": "^0.1.2",
     "meow": "^3.3.0",
-    "semver-sort": "0.0.2"
+    "mkdirp": "^0.5.1",
+    "object-assign": "^4.0.1",
+    "pinkie-promise": "^1.0.0",
+    "rimraf": "^2.4.3",
+    "yauzl": "^2.3.1"
   },
   "devDependencies": {
+    "ava": "^0.2.0",
     "mocha": "^2.2.5",
-    "xo": "^0.7.1"
-  },
-  "xo": {
-    "envs": [
-      "node",
-      "mocha"
-    ]
+    "xo": "*"
   }
 }
