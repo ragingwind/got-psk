@@ -14,7 +14,8 @@ $ npm install --save got-psk
 ```js
 var gotPSK = require('got-psk');
 
-gotPSK('psk-project', 'full').then(function (res) {
+gotPSK('psk-project', 'full').then(function () {
+	
 });
 ```
 
@@ -47,18 +48,18 @@ $ npm install --global got-psk
 ```
 $ got-psk <dest> <version> --help
 
-	Usage
-  	$ got-psk <dest> <version>
+Usage
+	$ got-psk <dest> <version>
 
-	Examples
-		$ got-psk .
-		# will download the latest version of PSK full version to current path
+Examples
+	$ got-psk .
+	# will download the latest version of PSK full version to current path
 
-		$ got-psk . light
-		# will download the latest version of PSK light version to current path
+	$ got-psk . light
+	# will download the latest version of PSK light version to current path
 
-		$ got-psk . full@1.0.3
-		# will download the 1.0.3 version of PSK light version to current path
+	$ got-psk . full@1.0.3
+	# will download the 1.0.3 version of PSK light version to current path
 ```
 
 ## License
