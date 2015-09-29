@@ -20,8 +20,12 @@ var cli = meow({
 	]
 });
 
-gotPsk(cli.input[0], cli.input[1]).then(function (res) {
-	console.log('PSK download has completed. files are on ', res.dest);
+function log() {
+	console.log.apply(console, arguments);
+}
+
+gotPsk(cli.input[0], cli.input[1], log).then(function (res) {
+	console.log('PSK download has completed. files are on', res.dest);
 }).catch(function (err) {
 	console.error(err.toString(), err.stack);
 });

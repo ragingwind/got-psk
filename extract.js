@@ -44,21 +44,21 @@ module.exports = function (zip, dest) {
 					return;
 				}
 
-				try {
-					zipfile.openReadStream(entry, function (err, readfile) {
-						if (err) {
-							console.error(err.toString(), err.stack);
-							return;
-						}
+				zipfile.openReadStream(entry, function (err, readfile) {
+					if (err) {
+						console.error(err.toString(), err.stack);
+					}
 
-						readfile.pipe(fs.createWriteStream(filename));
-						readfile.on('error', function (err) {
-							console.error(err.toString(), err.stack);
-						});
+					var f = fs.createWriteStream(filename);
+					f.on('error', function (err) {
+						console.error(err.toString(), err.stack);
 					});
-				} catch (e) {
-					console.log(e);
-				}
+
+					readfile.pipe(f);
+					readfile.on('error', function (err) {
+						console.error(err.toString(), err.stack);
+					});
+				});
 			});
 		});
 	});
