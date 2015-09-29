@@ -1,8 +1,8 @@
 'use strict';
 
 var gotGhReleases = require('got-github-releases');
-var download = require('./download');
-var extract = require('./extract');
+var download = require('./lib/download');
+var extract = require('./lib/extract');
 var rimraf = require('rimraf');
 
 function makeUrl(version, semver) {
