@@ -21,7 +21,7 @@ test.before(t => {
 });
 
 test('get the latest version of psk full version', t => {
-	mkdirp('.tmp/full');
+	mkdirp.sync('.tmp/full');
 
 	gotPSK('.tmp/full', 'full').then(function () {
 		access('full/gulpfile.js', e => {
@@ -35,7 +35,7 @@ test('get the latest version of psk full version', t => {
 });
 
 test('get the specific version of psk', t => {
-	mkdirp('.tmp/full-1.0.3');
+	mkdirp.sync('.tmp/full-1.0.3');
 
 	gotPSK('.tmp/full-1.0.3', 'full@1.0.3').then(function (res) {
 		t.not(res.zip.indexOf('1.0.3'), -1);
@@ -50,7 +50,7 @@ test('get the specific version of psk', t => {
 });
 
 test('get the latest of light', t => {
-	mkdirp('.tmp/light');
+	mkdirp.sync('.tmp/light');
 
 	gotPSK('.tmp/light', 'light').then(function () {
 		access('light/app/bower_components', e => {
@@ -58,6 +58,23 @@ test('get the latest of light', t => {
 			t.end();
 		});
 	}).catch(function (err) {
+		t.fail(err);
+		t.end();
+	});
+});
+
+test.serial('install to current path', t => {
+	mkdirp.sync('.tmp/full-cwd');
+	process.chdir(path.join(__dirname, '.tmp/full-cwd/'));
+
+	gotPSK('.', 'full').then(function () {
+		access('full-cwd/gulpfile.js', e => {
+			process.chdir(__dirname);
+			t.ok(!e);
+			t.end();
+		});
+	}).catch(function (err) {
+		process.chdir(__dirname);
 		t.fail(err);
 		t.end();
 	});
