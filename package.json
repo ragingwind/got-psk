@@ -19,8 +19,7 @@
   "files": [
     "index.js",
     "cli.js",
-    "download.js",
-    "extract.js"
+    "lib"
   ],
   "keywords": [
     "got",
