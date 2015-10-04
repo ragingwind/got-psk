@@ -15,7 +15,7 @@ var cli = meow({
 		'	$ got-psk . light',
 		'	# will download the latest version of PSK light version to current path',
 		'',
-		'$ got-psk . full@1.0.3',
+		'	$ got-psk . full@1.0.3',
 		'	# will download the 1.0.3 version of PSK light version to current path'
 	]
 });
