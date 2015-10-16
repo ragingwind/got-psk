@@ -1,4 +1,4 @@
-# got-psk [![Build Status](https://travis-ci.org/ragingwind/node-got-psk.svg?branch=master)](https://travis-ci.org/ragingwind/node-got-psk)
+# got-psk
 
 > Got [Polymer Starter Kit](https://goo.gl/xWC7vj) in variety options
 
@@ -15,7 +15,7 @@ $ npm install --save got-psk
 var gotPSK = require('got-psk');
 
 gotPSK('psk-project', 'full').then(function () {
-	
+
 });
 ```
 

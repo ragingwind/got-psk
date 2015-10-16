@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "ava": "^0.2.0",
-    "mocha": "^2.2.5",
     "xo": "*"
   }
 }
