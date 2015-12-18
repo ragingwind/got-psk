@@ -1,4 +1,4 @@
-# got-psk
+# got-psk [![Build Status](https://travis-ci.org/ragingwind/got-psk.svg?branch=master)](https://travis-ci.org/ragingwind/got-psk)
 
 > Got [Polymer Starter Kit](https://goo.gl/xWC7vj) in variety options
 
